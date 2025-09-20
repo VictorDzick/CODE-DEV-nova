@@ -197,3 +197,59 @@ const items = document.querySelectorAll(".faq-item");
         });
 
         // FIMM DO SCRIPT EFEITO HAMBUGUER
+
+        
+function typeWriter(element, text, speed, callback) {
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    } else if (callback) {
+      callback();
+    }
+  }
+  typing();
+}
+
+// Pega os elementos
+const title = document.getElementById("imagine-title");
+const highlight = document.getElementById("imagine-highlight");
+const text = document.getElementById("imagine-text");
+
+// Textos para digitar
+const titleText = "Já imaginou?";
+const highlightText = "Ter um site que converte visitantes em clientes todos os dias e/ou aumentar sua produtividade com processos automatizados?";
+const textContent = "A Code Desenvolvimentos ajuda empresas diariamente a terem melhores resultados e entregando cada vez mais qualidade e praticidade.";
+
+// Chamando com delay em sequência
+typeWriter(title, titleText, 80, () => {
+  setTimeout(() => {
+    typeWriter(highlight, highlightText, 40, () => {
+      setTimeout(() => {
+        typeWriter(text, textContent, 30);
+      }, 300);
+    });
+  }, 800);
+});
+
+
+// EFEITO PARA QUANDO ROLAR A PAGINA
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-left, .zoom-in, .bounce-in");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.9 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+// FIM DE EFEITO QUANDO ROLAR A PAGINA
