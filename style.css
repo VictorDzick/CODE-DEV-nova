@@ -1162,6 +1162,45 @@ background: linear-gradient(0deg, rgba(3, 7, 20, 1) 6%, rgba(18, 41, 110, 1) 15%
 }
  
   
+@media (max-width: 1024px) {
+
+     .welcome-text{
+        font-size: 30px;
+    }
+.div_text{
+margin-left: 15px;
+   
+}
+
+.text {
+    margin-left: 30px;
+}
+    .logo_cod{
+    width: 80px;
+    height: 20px;
+}
+
+.contact-box img{
+    display: none;
+}
+
+.faq_duvidas{
+    padding: 30px;
+}
+
+.btn{
+    margin-left: 10px;
+}
+
+.contact-box{
+    width: 110%;
+    margin-left: -15px;
+}
+
+.imagine-section{
+        padding: 20px;
+}
+}
 
   
 
