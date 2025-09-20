@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 autoSlideInterval = setInterval(() => {
                     currentIndex++;
                     moveCarousel();
-                }, 1000);
+                }, 4000);
             }
             
             // Parar movimento automático

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site em Desenvolvimento</title>
+    <link rel="stylesheet" href="servico.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            <span>CODE</span>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servico.html">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">⚙️</div>
+        </div>
+        
+        <h1>Estamos em Desenvolvimento</h1>
+        
+        <p>Estamos trabalhando duro para trazer a você uma experiência incrível. Nosso site está passando por melhorias e em breve estará disponível com recursos fantásticos!</p>
+        
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        
+        <div class="counter">Progresso: 75% concluído</div>
+        
+        <p>Enquanto isso, sinta-se à vontade para nos seguir nas redes sociais ou entrar em contato conosco.</p>
+        
+        <div class="contact">
+            <div class="social-icons">
+                <a href="#" class="social-icon">📧</a>
+                <a href="#" class="social-icon">💼</a>
+                <a href="#" class="social-icon">📱</a>
+                <a href="#" class="social-icon">🐦</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Script opcional para tornar a barra de progresso dinâmica
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            let width = 70;
+            let direction = 1;
+            
+            setInterval(() => {
+                if (width > 75) direction = -1;
+                if (width < 70) direction = 1;
+                
+                width += 0.1 * direction;
+                progressBar.style.width = width + '%';
+            }, 100);
+        });
+
+
+
+        // SCRIPT DO MENU EFEITO HAMBUGUER
+    document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+            
+            // Fechar o menu ao clicar em um link (opcional)
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+            
+            // Fechar o menu ao redimensionar para desktop (opcional)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    menuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+        // FIMM DO SCRIPT EFEITO HAMBUGUER
+    </script>
+</body>
+</html>

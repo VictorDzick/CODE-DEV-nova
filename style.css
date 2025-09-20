@@ -20,7 +20,7 @@ background: linear-gradient(180deg, rgba(38, 96, 222, 1) 0%, rgba(11, 41, 117, 1
         header {
             background: linear-gradient(135deg, #2c3e50, #1a2530);
             color: white;
-            padding: 1rem 2rem;
+           
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,9 +39,8 @@ background: linear-gradient(180deg, rgba(38, 96, 222, 1) 0%, rgba(11, 41, 117, 1
             font-weight: bold;
         }
 
-        .logo i {
-            margin-right: 10px;
-            color: #3498db;
+        .logo_cod {
+            width: 250px;
         }
 
         nav ul {
@@ -114,7 +113,7 @@ background: linear-gradient(180deg, rgba(38, 96, 222, 1) 0%, rgba(11, 41, 117, 1
                 top: 100%;
                 right: 0;
                 width: 0;
-                height: calc(100vh - 70px);
+                /* height: calc(100vh - 70px); */
                 background: linear-gradient(135deg, #2c3e50, #1a2530);
                 transition: width 0.3s ease-in-out;
                 overflow-x: hidden;
@@ -122,7 +121,7 @@ background: linear-gradient(180deg, rgba(38, 96, 222, 1) 0%, rgba(11, 41, 117, 1
             }
 
             nav.active {
-                width: 70%;
+                width: 50%;
             }
 
             nav ul {
@@ -225,7 +224,7 @@ background: linear-gradient(180deg, rgba(38, 96, 222, 1) 0%, rgba(11, 41, 117, 1
         }
 
         .welcome-text {
-            font-size: 2rem;
+            font-size: 4rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
             color: #ffffff;
@@ -970,7 +969,7 @@ background: linear-gradient(0deg, rgba(3, 7, 20, 1) 6%, rgba(18, 41, 110, 1) 15%
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
         font-size: 40px;
     }
     .faq span{
@@ -985,7 +984,7 @@ background: linear-gradient(0deg, rgba(3, 7, 20, 1) 6%, rgba(18, 41, 110, 1) 15%
 
     .faq-item h3 {
       margin: 0;
-      font-size: 18px;
+      font-size: 20px;
       color: #ccc;
       transition: color 0.3s;
     }
@@ -999,7 +998,8 @@ background: linear-gradient(0deg, rgba(3, 7, 20, 1) 6%, rgba(18, 41, 110, 1) 15%
       overflow: hidden;
       transition: max-height 0.4s ease;
       margin: 10px 0 0;
-      color: #bbb;
+      color: rgb(253, 253, 253);
+      font: bold;
     }
 
     .faq-item.active p {
@@ -1151,16 +1151,16 @@ background: linear-gradient(0deg, rgba(3, 7, 20, 1) 6%, rgba(18, 41, 110, 1) 15%
 }
 
 /* Smartphones */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   header {
     flex-direction: row;
     padding: 15px 20px;
   }
+  .div_text{
+    margin-left: 70px;
+  }
 }
-  /* Menu responsivo */
-  
-
-  /* Botão menu hamburguer */
+ 
   
 
   
@@ -1168,5 +1168,17 @@ background: linear-gradient(0deg, rgba(3, 7, 20, 1) 6%, rgba(18, 41, 110, 1) 15%
 /* Celulares pequenos */
 @media (max-width: 480px) {
 
+    .welcome-text{
+        font-size: 30px;
+    }
+.div_text{
+margin-left: 15px;
+   
 }
 
+.contact-box img{
+    display: none;
+}
+
+
+}
